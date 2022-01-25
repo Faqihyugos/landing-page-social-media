@@ -58,16 +58,16 @@ section ul li a {
     display: inline-block;
     width: 100%;
     padding: 15px;
-    background: #7879b9;
+    background: #d73e3e;
     color: #fff;
-    border: solid 2px #7879b9;
+    border: solid 2px #d73e3e;
     border-radius: 5px;
     transition: .25s;
 }
 
 section ul li a:hover {
     background: transparent;
-    color:#7879b9;
+    color:#d73e3e;
 }
 
 footer a {
@@ -90,6 +90,7 @@ footer a {
 
 aside{
     position:fixed;
+    z-index: 100;
     top: 0;
     left: 0;
     display: flex;
@@ -112,19 +113,37 @@ aside .warning-container p {
 aside .warning-container a {
     padding: 10px 15px;
     background: transparent;
-    color: #7879b9;
+    color: #d73e3e;
     transition: .25s;
 }
 
 aside .warning-container a:last-child{
     margin-left: 5px;
-    background: #7879b9;
+    background: #d73e3e;
     color: #fff;
-    border: solid 2px #7879b9;
+    border: solid 2px #d73e3e;
     border-radius: 5px;
 }
 
 aside .warning-container a:last-child:hover{
     background: transparent;
-    color: #7879b9;
+    color: #d73e3e;
+}
+
+
+/* dark mode */
+
+@media (prefers-color-scheme: dark) {
+    body,
+    aside {
+        background: #263238;
+        color: #fff
+    }
+    img {
+        filter: grayscale(25%);
+    }
+
+    footer a{
+        background: url(progate-white.png) center center no-repeat;
+    }
 }
